@@ -1,0 +1,15 @@
+name = 'favicon-snatcher'
+type = 'javascript'
+compatibility_date = '2021-10-06'
+account_id = 'fe86c3d78b514b31fdd1a74181c2c4ce'
+workers_dev = true
+
+kv_namespaces = [
+  { binding = 'STORE', id = 'ad048e40bde149cda7360a6dbee8eaf3', preview_id = '971320545ce14c8cb2853d3e68e79bb4' }
+]
+
+[build]
+command = 'yarn esbuild src/index.ts --bundle --format=esm --outfile=dist/worker.js'
+
+[build.upload]
+format = 'service-worker'
